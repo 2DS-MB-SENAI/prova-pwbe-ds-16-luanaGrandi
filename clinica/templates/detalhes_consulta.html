@@ -11,7 +11,7 @@
         {% csrf_token %}
         <!-- cria um forms automatico -->
         {{form.as_p}}
-        <a href="{% url 'listar_medicos'%}"><button>Enviar</button></a>
+        <button type="submit">Enviar</button>
     </form>
 </body>
 </html>

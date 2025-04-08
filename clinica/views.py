@@ -6,6 +6,7 @@ def listar_medicos(request):
     listar = Medico.objects.all()
     return render (request, 'listar_medicos.html', {'listar': listar})
 
+
 def criar_consulta(request):
     if request.method == 'POST':
         form = ConsultaForms(request.POST)
@@ -18,7 +19,8 @@ def criar_consulta(request):
 
 def detalhes_consulta (request, pk):
     consulta = get_object_or_404(Consulta, pk = pk)
-    consulta = Consulta.objects.all().order_by(pk)
+    return render(request, 'detalhes_consulta.html', {'consulta': consulta})
+
 
 def filtro_especialidade(request):
     especialidade = request.GET.get('especialidade', '')
