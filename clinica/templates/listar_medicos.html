@@ -15,6 +15,7 @@
         <button type="submit">Pesquisar</button>
     </form>
 
+    <a href="{% url 'criar_consulta'  %}">criar consulta</a>
    
 
     <ul>
@@ -25,7 +26,7 @@
             {{i.email}}
             {{i.especialidade}}
 
-            <a href="{% url 'detalhes_consulta'  i.pk %}">Agendamento de Consulta</a>
+            <a href="{% url 'detalhes_consulta' i.pk %}">Agendamento de Consulta</a>
         </li>
         {% endfor %}
     </ul>

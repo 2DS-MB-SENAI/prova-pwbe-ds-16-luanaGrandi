@@ -5,7 +5,7 @@ from .forms import ConsultaForms
 def listar_medicos(request):
     listar = Medico.objects.all()
     return render (request, 'listar_medicos.html', {'listar': listar})
-
+    
 
 def criar_consulta(request):
     if request.method == 'POST':
@@ -15,7 +15,7 @@ def criar_consulta(request):
             return redirect('listar_medicos')
     else:
         form = ConsultaForms()
-    return render(request, 'from_consulta.html', {'form': form})
+    return render(request, 'criar_consulta.html', {'form': form})
 
 def detalhes_consulta (request, pk):
     consulta = get_object_or_404(Consulta, pk = pk)
