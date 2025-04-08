@@ -6,6 +6,6 @@ urlpatterns = [
     path('api/servicos/<int:pk>', views.detalhes_servicos),
 
     path('api/agendamentos/', views.read_agendamentos),
-    path('api/agendamentos/<int:pk>', views.detalhes_agendametos),
+    path('api/agendamentos/<int:pk>/', views.detalhes_agendametos),
 
 ]
