@@ -32,7 +32,7 @@ def detalhes_servicos(request, pk):
 
 # agendamentos
 
-@api_view(['GET'])
+@api_view(['GET', 'POST'])
 def read_agendamentos(request):
     if request.method == 'GET':
         agendamentos = Servico.objects.all()
