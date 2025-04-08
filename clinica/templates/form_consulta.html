@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de consulta</title>
+</head>
+<body>
+    <h1>Agendamento de consulta</h1>
+    <form  method="post">
+        {% csrf_token %}
+        <!-- cria um forms automatico -->
+        {{form.as_p}}
+        <a href="{% url 'listar_medicos'%}"><button>Enviar</button></a>
+    </form>
+</body>
+</html>
